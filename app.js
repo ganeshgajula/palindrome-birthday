@@ -11,7 +11,7 @@ loader.style.display = "none";
 happyImg.style.display = "none";
 sadImg.style.display = "none";
 
-const successMsg = "Yay Congratulations!!, your birthday is palindrome.";
+const successMsg = "Yay Congratulations!! your birthday is palindrome.";
 const unsuccessMsg = "Seems like your birthday is not palindrome.";
 
 let count = 0;

@@ -154,13 +154,24 @@ a {
   font-weight: 500;
 }
 
-@media (max-width: 500px) {
-  #header-wrap {
-    max-width: 350px;
+@media (max-width: 359px) {
+  #header-wrap,
+  #calcPalin {
+    max-width: 270px;
     margin: 1rem auto;
   }
+  .header-img,
+  .happy,
+  .sad {
+    max-width: 210px;
+  }
+
+  .loader {
+    max-width: 200px;
+  }
+
   #header-text h1 {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   #header-content {
@@ -168,5 +179,66 @@ a {
     flex-direction: column-reverse;
     justify-content: space-between;
     text-align: center;
+  }
+
+  .social i {
+    padding: 0.8rem;
+    color: white;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 548px) {
+  #header-wrap,
+  #calcPalin {
+    max-width: 350px;
+    margin: 1rem auto;
+  }
+  .header-img,
+  .happy,
+  .sad {
+    max-width: 280px;
+  }
+  #header-text h1 {
+    font-size: 2.1rem;
+  }
+
+  #header-content {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  .social i {
+    padding: 0.8rem;
+    color: white;
+  }
+}
+
+@media (min-width: 549px) and (max-width: 800px) {
+  #header-wrap,
+  #calcPalin {
+    max-width: 550px;
+    margin: 2rem auto;
+  }
+  .header-img,
+  .happy,
+  .sad {
+    max-width: 280px;
+  }
+  #header-text h1 {
+    font-size: 2.1rem;
+  }
+
+  #header-content {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  .social i {
+    padding: 0.8rem;
+    color: white;
   }
 }
