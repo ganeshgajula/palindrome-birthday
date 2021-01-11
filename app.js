@@ -2,6 +2,9 @@ const submitBtn = document.querySelector(".submitBtn");
 const birthDate = document.querySelector(".bDate");
 const checkBtn = document.querySelector("#checkBtn");
 const resultMsg = document.querySelector("#resultTxt");
+const loader = document.querySelector(".loader");
+
+loader.style.display = "none";
 
 const successMsg = "Hey Congratulations, your birthday is palindrome";
 const unsuccessMsg = "Sorry, your birthday is not palindrome";
@@ -29,6 +32,10 @@ function clickHandler(e) {
   console.log(ddmmyyyy);
   console.log(mmddyy);
   // console.log(typeof yyyymmdd);
+
+  setTimeout(function () {
+    loader.style.display = "block";
+  }, 10000);
 
   checkPalindrome(yyyymmdd);
   console.log("Done with 1st round now onto next");
