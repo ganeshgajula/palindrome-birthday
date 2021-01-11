@@ -25,16 +25,17 @@
             >For eg. The word madam or the number 12321 reads same when read
             backward & forward.</small
           >
-          <button id="checkBtn">
-            Let's Check <i class="fas fa-arrow-circle-right"></i>
-          </button>
+
+          <a id="checkBtn" href="#calcPalin"
+            >Let's Check <i class="fas fa-arrow-circle-right"></i
+          ></a>
         </div>
         <img src="celebration.svg" alt="party image" />
       </header>
     </div>
     <section id="calcPalin">
       <h2>
-        Enter you DOB and we'll let you know whether your birthday is
+        Enter your DOB and we'll let you know whether your birthday is
         palindrome.
       </h2>
       <p>
@@ -42,12 +43,43 @@
         formats yyyy-mm-dd, dd-mm-yyyy, mm-dd-yy
       </p>
       <form id="palinForm">
-        <input type="date" class="bDate" />
-        <input type="submit" class="submitBtn" value="Submit" />
+        <input type="date" required class="bDate" />
+        <input type="submit" class="submitBtn" value="Check" />
+        <input type="submit" class="resetBtn" value="Reset" />
       </form>
       <img class="loader" src="loading.gif" alt="loader" height="160px" />
+      <img
+        src="celebration-gif.gif"
+        alt="celebration"
+        class="happy"
+        height="200px"
+      />
+      <img src="sad-gif.gif" alt="celebration" class="sad" height="200px" />
       <h3 id="resultTxt"></h3>
     </section>
+    <footer class="footer">
+      <div class="footer-header">You can connect with me on</div>
+      <div class="social social-icons">
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/ganesh-gajula-5ab558170/"
+          ><i class="fab fa-linkedin-in fa-2x"></i
+        ></a>
+        <a target="_blank" href="https://twitter.com/GaneshGajula18"
+          ><i class="fab fa-twitter fa-2x"></i
+        ></a>
+        <a target="_blank" href="https://github.com/ganeshgajula"
+          ><i class="fab fa-github fa-2x"></i
+        ></a>
+        <a target="_blank" href="https://dev.to/ganeshgajula"
+          ><i class="fab fa-dev fa-2x"></i
+        ></a>
+      </div>
+      <p>
+        &copy; 2021 | Created by
+        <a href="https://ganeshgajula.netlify.app"> Ganesh Gajula</a>
+      </p>
+    </footer>
     <script src="app.js"></script>
   </body>
 </html>

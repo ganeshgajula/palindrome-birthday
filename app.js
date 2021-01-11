@@ -1,13 +1,18 @@
 const submitBtn = document.querySelector(".submitBtn");
+const resetBtn = document.querySelector(".resetBtn");
 const birthDate = document.querySelector(".bDate");
 const checkBtn = document.querySelector("#checkBtn");
 const resultMsg = document.querySelector("#resultTxt");
 const loader = document.querySelector(".loader");
+const happyImg = document.querySelector(".happy");
+const sadImg = document.querySelector(".sad");
 
 loader.style.display = "none";
+happyImg.style.display = "none";
+sadImg.style.display = "none";
 
-const successMsg = "Hey Congratulations, your birthday is palindrome";
-const unsuccessMsg = "Sorry, your birthday is not palindrome";
+const successMsg = "Yay Congratulations!!, your birthday is palindrome.";
+const unsuccessMsg = "Seems like your birthday is not palindrome.";
 
 let count = 0;
 
@@ -32,10 +37,19 @@ function clickHandler(e) {
   console.log(ddmmyyyy);
   console.log(mmddyy);
   // console.log(typeof yyyymmdd);
-
+  birthDate.disabled = true;
+  submitBtn.disabled = true;
+  loader.style.display = "block";
+  resultMsg.style.display = "none";
   setTimeout(function () {
-    loader.style.display = "block";
-  }, 10000);
+    loader.style.display = "none";
+    resultMsg.style.display = "block";
+    if (count === 0) {
+      sadImg.style.display = "block";
+    } else {
+      happyImg.style.display = "block";
+    }
+  }, 5200);
 
   checkPalindrome(yyyymmdd);
   console.log("Done with 1st round now onto next");
@@ -72,6 +86,7 @@ function checkPalindrome(checkDate) {
   if (originalNo === reverseNo) {
     // console.log("Hey Congratulations, your birthday is palindrome");
     setMessage(successMsg);
+
     count++;
     console.log(count);
   }
@@ -94,6 +109,16 @@ function checkPalindrome(checkDate) {
   // }
 }
 
+function resetHandler() {
+  birthDate.disabled = false;
+  submitBtn.disabled = false;
+  birthDate.value = "";
+  happyImg.style.display = "none";
+  sadImg.style.display = "none";
+  resultMsg.style.display = "none";
+  count = 0;
+}
+
 function setMessage(Msg) {
   resultMsg.innerText = Msg;
 }
@@ -104,4 +129,4 @@ function pageDown() {
 
 submitBtn.addEventListener("click", clickHandler);
 
-checkBtn.addEventListener("click", pageDown);
+resetBtn.addEventListener("click", resetHandler);
