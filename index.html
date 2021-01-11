@@ -3,18 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>palindrome birthday</title>
   </head>
   <body>
-    <header>
-      <h1>Let's Check Whether your birthdate is palindrome or not.</h1>
-    </header>
-    <section>
-      <form>
+    <div id="header-wrap">
+      <header id="header-content">
+        <div id="header-text">
+          <h1>Let's Check Whether your birthday is palindrome or not.</h1>
+          <p>
+            A palindrome is a word, number, phrase or other sequence of
+            characters which reads the same backward as forward.
+          </p>
+          <small
+            >For eg. The word madam or the number 12321 reads same when read
+            backward & forward.</small
+          >
+          <button id="checkBtn">
+            Let's Check <i class="fas fa-arrow-circle-right"></i>
+          </button>
+        </div>
+        <img src="celebration.svg" alt="party image" />
+      </header>
+    </div>
+    <section id="calcPalin">
+      <h2>
+        Enter you DOB and we'll let you know whether your birthday is
+        palindrome.
+      </h2>
+      <p>
+        To increase your chances of winning this app checks your DOB in 3
+        formats yyyy-mm-dd, dd-mm-yyyy, mm-dd-yy
+      </p>
+      <form id="palinForm">
         <input type="date" class="bDate" />
         <input type="submit" class="submitBtn" value="Submit" />
       </form>
+      <h3 id="resultTxt"></h3>
     </section>
     <script src="app.js"></script>
   </body>

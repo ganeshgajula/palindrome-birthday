@@ -1,5 +1,7 @@
 const submitBtn = document.querySelector(".submitBtn");
 const birthDate = document.querySelector(".bDate");
+const checkBtn = document.querySelector("#checkBtn");
+const resultMsg = document.querySelector("#resultTxt");
 
 const successMsg = "Hey Congratulations, your birthday is palindrome";
 const unsuccessMsg = "Sorry, your birthday is not palindrome";
@@ -86,7 +88,13 @@ function checkPalindrome(checkDate) {
 }
 
 function setMessage(Msg) {
-  console.log(Msg);
+  resultMsg.innerText = Msg;
+}
+
+function pageDown() {
+  document.body.scrollDown = 600;
 }
 
 submitBtn.addEventListener("click", clickHandler);
+
+checkBtn.addEventListener("click", pageDown);
